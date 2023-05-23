@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Profile } from ".components/Profile";
-import { Messages } from ".components/Messages";
+import { Profile } from "./components/Profile";
+import { Messages } from "./components/Messages";
 import { Settings } from "./components/Settings";
 import { Shop } from "./components/Shop";
 
