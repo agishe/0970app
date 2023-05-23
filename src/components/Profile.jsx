@@ -1,3 +1,28 @@
-export const Profile = () => {
-  return <h1>Это страница с профилем</h1>;
+import styles from "./Profile.module.css";
+
+export const Profile = (props) => {
+  let user = props.function();
+  return (
+    <div className="row">
+      <div className="col-sm-4">
+        <img src={user.avatar} alt="" width="100%" />
+      </div>
+      <div className="col-sm-8">
+        <h2 className={styles.id}>
+          ID: <span>{user.id}</span>
+        </h2>
+        <h2 className={styles.name}>
+          Имя и Фамилия:{" "}
+          <span>
+            {user.name} {user.lastname}
+          </span>
+        </h2>
+        <p className={styles.mail}>
+          E-mail: <span>{user.email}</span>
+        </p>
+        <p className={styles.text}>{user.about}</p>
+        <p style={{ fontWeight: 700 }}>Небольшой текст</p>
+      </div>
+    </div>
+  );
 };
