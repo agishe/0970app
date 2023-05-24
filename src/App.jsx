@@ -29,7 +29,7 @@ function App(props) {
         <div className="col-md-9">
           <Routes>
             <Route
-              path="/profile"
+              path="/profile/*"
               element={<Profile function={props.function.key_getUser} />}
             />
             <Route
