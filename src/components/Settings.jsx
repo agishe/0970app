@@ -1,14 +1,19 @@
+import { useState } from "react";
+
 export const Settings = () => {
+  const [count, setCount] = useState(0);
   return (
-    <div className="mx-auto flex flex-col justify-between">
-      <div className="flex flex-col xl:flex-row md:text-xl md:text-2xl">
-        <a href="tel:+79851112233" className="hover: text-green-800">
-          <span className="hidden xl:inline-block hover:-translate-y-1">
-            Москва
-          </span>
-          +7-985-111-22-33
-        </a>
+    <>
+      <div className="row">
+        <div className="col-md-6">
+          <p>Количество кликов: {count}</p>
+        </div>
+        <div className="col-md-6">
+          <button className="btn btn-info" onClick={() => {
+            setCount(count + 1);
+          }}>Нажми на меня</button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
